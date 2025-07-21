@@ -14,7 +14,6 @@ import "./pages/result";
 import { Router } from "@vaadin/router";
 
 const router = new Router(document.getElementById("app"));
-import { state } from "./client/state";
 
 router.setRoutes([
   { path: "/", component: "welcome-page" },

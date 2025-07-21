@@ -15,7 +15,7 @@ type appState = {
   result: string;
 };
 
-const domain = "http://localhost:3000";
+const domain = window.location.origin;
 
 export const state = {
   data: {
