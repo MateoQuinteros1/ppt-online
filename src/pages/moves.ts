@@ -79,9 +79,11 @@ class Moves extends HTMLElement {
 </style>
       `;
 
+    /* Un poco de delay para que el usuario pueda apreciar correctamente la elección del 
+    otro jugador antes de cambiar de vista */
     setTimeout(() => {
       state.whoWins();
-    }, 2000);
+    }, 2700);
   }
 }
 customElements.define("moves-page", Moves);
