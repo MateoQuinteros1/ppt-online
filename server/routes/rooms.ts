@@ -15,8 +15,8 @@ const roomsCollection = firestore.collection("rooms");
 router.post("/rooms", async (req, res) => {
   const { newRoom, userName, roomShortId } = req.body;
 
-  //Lógica si el usuario crea una nueva sala
   if (newRoom === true) {
+    //Lógica si el usuario crea una nueva sala
     const rtdbRoomRef = rtdb.ref(`/rooms/${nanoid()}`);
     rtdbRoomRef
       .set({

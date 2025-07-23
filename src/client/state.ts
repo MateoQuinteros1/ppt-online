@@ -65,7 +65,12 @@ export const state = {
       body: requestData,
     })
       .then((res) => {
-        return res.json();
+        if (res.status === 404) {
+          Router.go("/notfound");
+          return;
+        } else {
+          return res.json();
+        }
       })
       .then((json) => {
         const access = json.access;

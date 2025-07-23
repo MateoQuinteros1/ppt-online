@@ -9,6 +9,7 @@ import "./pages/waiting-opponent";
 import "./pages/play";
 import "./pages/moves";
 import "./pages/result";
+import "./pages/notfound";
 
 //Router
 import { Router } from "@vaadin/router";
@@ -26,5 +27,6 @@ router.setRoutes([
   { path: "/play", component: "play-page" },
   { path: "/moves", component: "moves-page" },
   { path: "/result", component: "result-page" },
+  { path: "/notfound", component: "not-found" },
   { path: "(.*)", redirect: "/" },
 ]);
