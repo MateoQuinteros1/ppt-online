@@ -123,7 +123,7 @@ router.post("/rooms", async (req, res) => {
   }
 });
 
-router.post("/rooms/:roomId", (req, res) => {
+router.put("/rooms/:roomId", (req, res) => {
   const fsRoomId = req.params.roomId;
   const reqBody = req.body;
   const roomRef = roomsCollection

@@ -254,7 +254,7 @@ export const state = {
   saveDataOnFs() {
     const currentState = this.getState();
     fetch(`${domain}/rooms/${currentState.roomShortId}`, {
-      method: "POST",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },

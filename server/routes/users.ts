@@ -6,18 +6,6 @@ import { firestore } from "../firebase/db";
 
 export const router = Router();
 
-router.patch("/users", (req, res) => {
-  const userName = req.query.userName;
-  const rtdbRoomId = req.query.rtdbRoomId;
-  const { online } = req.body;
-
-  const rtdbRoomRef = rtdb.ref(`/rooms/${rtdbRoomId}/currentGame/${userName}`);
-
-  rtdbRoomRef.update({ online }).then(() => {
-    res.sendStatus(200);
-  });
-});
-
 router.patch("/users/start", (req, res) => {
   const userName = req.query.userName;
   const rtdbRoomId = req.query.rtdbRoomId;
